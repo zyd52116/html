@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5练习</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            border:  2px;
+            border-color: #02f0f4;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<form method="post">
+    用户名：<input type="text" name="username" required autofocus pattern="^[a-zA-Z]\w{2,7}" title="必须以字母开头，包含字符或数字，长度3-8" placeholder="在这里输入"><br>
+    密  码：<input type="password" name="password" pattern="\d{6}" title="必须输入6个数字"><br>
+    <input type="submit" value="提交">
+    <input type="reset" value="取消" >
+    <input type="color" id="col">
+    <input type="url">
+    <input type="date">
+    <input type="time">
+    <input type="search">
+    <br>
+    <input type="range" min="0" max="100" step="any">
+    <br>
+    <input type="text" name="major" list="lstMajor">
+    <datalist id="lstMajor">
+        <option value="软件工程">
+        <option value="网络工程">
+        <option value="信息工程">
+    </datalist>
+    <input name="name" type="text">
+    <marquee direction="left" onmouseover="this.stop()" onmouseout=this.start()><img src="../images/move.gif" alt="动图" width="100px" height="100px"></marquee>
+</form>
+<div id="example"></div>
+</body>
+<script>
+
+    txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+    txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+    txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+    txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+    txt+= "<p>Platform: " + navigator.platform + "</p>";
+    txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+    txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+    document.getElementById("example").innerHTML=txt;
+
+</script>
+<script>
+    function change() {
+        document.getElementById("div1").style.backgroundColor = document.getElementById("col").value;
+    }
+    var show=setInterval("change()",100);
+</script>
+<script>
+    var i=10;
+    function a() {
+        console.log(i);
+    };
+    a();
+</script>
+</html>

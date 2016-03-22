@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星期</title>
+</head>
+<body>
+<script>
+    var now=new Date();
+    var day=now.getDay();
+    var week;
+    switch (day){
+        case 1:
+            week="星期一";
+            break;
+        case 2:
+            week="星期二";
+            break;
+        case 3:
+            week="星期三";
+            break;
+        case 4:
+            week="星期四";
+            break;
+        case 5:
+            week="星期五";
+            break;
+        case 6:
+            week="星期六";
+            break;
+        case 7:
+            week="星期日";
+            break;
+    }
+    document.write("今天是"+week);
+    document.write("<br>");
+    var sum=0;
+    for(var i=0;i<101;i++){
+        sum+=i;
+    }
+    document.write("加起来的总和为:"+sum);
+    function recursion(num){
+        if(num<=1){
+            return 1;
+        }
+        else{return recursion(num-1)*num;}
+    }
+    document.write("<br>");
+    document.write("10!的结果为:"+recursion(10));
+</script>
+</body>
+</html>

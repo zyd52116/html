@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试div</title>
+    <link type="text/css" rel="stylesheet" href="../css/testdiv.css">
+    <script type="text/javascript" src="../javascript/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div id="block">
+    <div class="a">1<br><b>未选中</b></div>
+    <div class="a">2<br><b>未选中</b></div>
+    <div class="a">3<br><b>未选中</b></div>
+    <div class="a">4<br><b>未选中</b></div>
+    <div class="a">5<br><b>未选中</b></div>
+    <div class="a">6<br><b>未选中</b></div>
+    <div class="a">7<br><b>未选中</b></div>
+    <div class="a">8<br><b>未选中</b></div>
+    <div class="a">9<br><b>未选中</b></div>
+    <div class="a">10<br><b>未选中</b></div>
+    <div class="a">11<br><b>未选中</b></div>
+    <div class="a">12<br><b>未选中</b></div>
+    <div class="a">13<br><b>未选中</b></div>
+    <div class="a">14<br><b>未选中</b></div>
+    <div class="a">15<br><b>未选中</b></div>
+    <div class="a">16<br><b>未选中</b></div>
+    </div>
+<div id="con">
+<button id="change_Color">变色</button>
+<button id="show_hide">显示/隐藏</button><br>
+    <label>用户名<input type="text" id="name"></label><br>
+    <label>密 码<input type="password" id="key"></label><br>
+    <input type="submit" title="提交" id="put">
+    <button id="clear">清除内容</button>
+    </div>
+<!--<script type="text/javascript" src="../javascript/creatediv.js"></script>-->
+<script type="text/javascript" src="../javascript/changecolor.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#change_Color").mousedown(function(){
+            $(".a").css("background-color","white");
+        });
+        $("#change_Color").mouseup(function(){
+            $(".a").css("background-color","aqua");
+        });
+        $("#show_hide").click(function(){
+            $("#block").toggle();
+        });
+        $("#put").click(function(){
+            if($("#name").val()!=null&&$("#name").val()!=""&&$("#key").val()!=null&&$("#key").val()!=""){
+            if($("#name").val().match("zyd")){
+                alert("提交成功");
+            }else
+            {alert("提交失败");}
+            }
+            else
+            {
+                alert("请将信息填完整");
+            }
+        });
+        $("#clear").click(function(){
+            $("#key").val("");
+            $("#name").val("");
+        });
+    });
+</script>
+</body>
+</html>

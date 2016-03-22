@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #2e6e9e;
+        }
+    </style>
+</head>
+<body>
+<p id="3"></p>
+<div id="2" >
+<input id="1" type="text" >
+    </div>
+<script>
+    function show(){
+        var e=document.getElementById("1");
+        e.placeholder="key";
+        e.focus();
+    }
+    function test(){
+        var f=document.getElementById("1").value;
+        if(f=="123")
+        {alert("ok")}
+        else
+        {alert("no")}
+    }
+    function show2(){
+        alert("yoyoyo");
+    }
+    var d=document.getElementById("2");
+    window.addEventListener("load",show,false);
+    document.getElementById("1").addEventListener("blur",test,false);
+    d.addEventListener("click",show2,false);
+</script>
+</body>
+</html>
